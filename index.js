@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client({
   intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
 });
-const { token } = require("./config.json");
+require("dotenv").config()
 
 const dialogues = [
   ".",
@@ -23,10 +23,10 @@ client.on("ready", () => {
 
 client.on("messageCreate", (msg) => {
   const user = msg.author.username;
-  if(user!=='PauL' && msg.channel.id==='848827307258675210'){
+  if(user!=='PauL' && msg.channel.id===process.env.CHANNEL_ID){
     let randomIndex = Math.floor(Math.random() * dialogues.length);
     msg.reply(`${dialogues[randomIndex]}`);
   }
 });
 
-client.login(token);
+client.login(process.env.TOKEN);

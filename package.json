@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "discord.js": "^13.6.0",
-    "dotenv": "^14.3.2",
-    "fs": "^0.0.1-security"
+    "dotenv": "^14.3.2"
   }
 }

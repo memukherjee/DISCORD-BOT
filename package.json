@@ -8,6 +8,9 @@
   },
   "author": "Akash Mukherjee",
   "license": "ISC",
+  "engines": {
+    "node": ">=16.6.0"
+  },
   "dependencies": {
     "discord.js": "^13.6.0",
     "dotenv": "^14.3.2",

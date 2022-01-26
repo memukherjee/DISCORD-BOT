@@ -28,7 +28,7 @@ async function gotMessage(msg) {
   if (msg.channel.id === process.env.CHANNEL_ID) {
     if (msg.content === ".avatar") {
       let randomNumber = Math.floor(Math.random() * 100000);
-      let url = `https://api.multiavatar.com/${randomNumber}.png?apikey=${process.env.AVATAR_API_KEY}`;
+      let url = `https://api.multiavatar.com/${randomNumber}.png`;
       // await axios.get(url).then((res) => {
       //   console.log(res);
       // })
